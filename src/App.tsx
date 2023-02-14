@@ -1,6 +1,13 @@
+import './App.scss'
+import HistoryDatesApp from "./components/HistoryDatesApp/HistoryDatesApp";
+
 
 export const App = () => {
+  
+
   return (
-    <h1>Hello lololo</h1>
-  )
-}
+    <>
+      <HistoryDatesApp/>
+    </>
+  );
+};

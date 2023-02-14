@@ -1,0 +1,18 @@
+.yearContainer {
+  display: flex;
+  justify-content: center;
+  height: 20vh;
+  align-items: center;
+  font-size: 32px;
+  margin-left: 20px;
+
+  .first {
+    color: rgb(52, 21, 230);
+    flex:1
+  };
+
+  .second {
+    color: rgb(253, 100, 228);
+    flex:1
+  }
+}

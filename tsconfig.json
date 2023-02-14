@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ES5",
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
+    "target": "ES2021",
     "module": "ESNext",
     "moduleResolution": "node",
     "lib": [
@@ -14,7 +15,12 @@
     "strict": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "build",
+    "strictNullChecks": true
   },
   "include": ["src/**/*"]
 }
