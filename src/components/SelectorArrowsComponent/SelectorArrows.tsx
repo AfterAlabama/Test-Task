@@ -1,21 +1,10 @@
 import cl from './SelectorArrows.module.scss'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
-import { FC } from 'react';
+import { FC} from 'react';
 import { ArrowsProps } from '../../utils/Props';
 
-const SelectorArrows: FC<ArrowsProps> = ({currentPage, pageLimit, setCurrentPage}) => {
 
-  const leftArrowClickHandler = () => {
-    if(currentPage !== 1){
-      setCurrentPage(currentPage - 1)
-    }
-  };
-
-  const rightArrowClickHandler = () => {
-    if(currentPage !== 6){
-      setCurrentPage(currentPage + 1)
-    }
-  };
+const SelectorArrows: FC<ArrowsProps> = ({currentPage, pageLimit, leftArrowClickHandler, rightArrowClickHandler}) => {
 
   return (
     <div

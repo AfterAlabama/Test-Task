@@ -1,11 +1,12 @@
-import { FC } from 'react';
+import { FC} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Block from '../BlockComponent/Block';
 import 'swiper/css';
-import { BlockProps } from '../../utils/Props';
+import { SwiperProps } from '../../utils/Props';
 import cl from './Swiper.module.scss';
 
-const SwiperDates: FC<BlockProps> = ({ firstYear }) => {
+const SwiperDates: FC<SwiperProps> = ({number}) => {
+ 
   return (
     <Swiper
       className={cl.swiper}
@@ -14,27 +15,27 @@ const SwiperDates: FC<BlockProps> = ({ firstYear }) => {
     >
       <SwiperSlide>
         <Block
-          firstYear={firstYear}
+          firstYear={number}
         />
       </SwiperSlide>
       <SwiperSlide>
         <Block
-          firstYear={firstYear + 2}
+          firstYear={number + 2}
         />
       </SwiperSlide>
       <SwiperSlide>
         <Block
-          firstYear={firstYear + 4}
+          firstYear={number + 4}
         />
       </SwiperSlide>
       <SwiperSlide>
         <Block
-          firstYear={firstYear + 5}
+          firstYear={number + 5}
         />
       </SwiperSlide>
       <SwiperSlide>
         <Block
-          firstYear={firstYear + 6}
+          firstYear={number + 6}
         />
       </SwiperSlide>
     </Swiper>

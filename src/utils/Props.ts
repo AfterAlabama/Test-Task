@@ -5,10 +5,13 @@ export interface BlockProps {
 
 export interface DotsProps {
   currentPage: number
+  DotClickHandler:(el:number) => void
 }
 
 export interface DotProps {
-  isChosen?: boolean
+  isChosen?: boolean;
+  currentPage: number;
+  DotClickHandler:(el:number) => void
 }
 
 export interface PageProps {
@@ -24,5 +27,22 @@ export interface YearsProps {
 export interface ArrowsProps {
   currentPage: number;
   pageLimit: number;
-  setCurrentPage: (curPage: number) => void
+  leftArrowClickHandler: () => void,
+  rightArrowClickHandler: () => void,
+}
+
+export interface Interfaceprops {
+  number: number
+}
+
+export interface ChangingInterfaceProps {
+  currentPage: number
+}
+
+export interface SwiperProps {
+  number:number
+}
+
+export interface CaptionProps {
+  number:number
 }
