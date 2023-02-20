@@ -1,17 +1,23 @@
-@import '../../App.scss';
+@import "../../App.scss";
+
+.pages {
+  color: rgba(1, 20, 85, 0.7);
+}
 
 //mobile
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px) {
   .pages {
-    margin-left: 20px;
-    margin-top: 50px
+    position: absolute;
+    margin-left: 5vw;
+    margin-top: 50vh;
   }
 }
 
-.pages {
-  margin-left: 4vw;
-  margin-top: 33vh;
-  font-size: 2vh;
-  color: rgba(1, 20, 85, 0.7);
-  font-weight: 100;
+//desktop
+@media only screen and (min-width: 769px) {
+  .pages {
+    margin-left: 4vw;
+    margin-top: 11vh;
+    font-size: 2vh;
+  }
 }

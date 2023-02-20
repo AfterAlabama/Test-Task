@@ -18,4 +18,6 @@ $secondYearColor: rgb(255, 80, 168);
   -webkit-user-drag: none;
 }
 
-
+.swiper-button-disabled{
+  display:none !important;   
+}

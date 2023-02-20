@@ -1,50 +1,48 @@
-@import '../../App.scss';
-
-//mobile
-@media only screen and (max-width: 500px){
-  .yearContainer {
-    display: flex;
-    justify-content: center;
-    height: 20vh;
-    align-items: center;
-    font-size: 32px;
-    margin-left: 20px;
-  
-    .first {
-      color: rgb(52, 21, 230);
-      flex:1
-    };
-  
-    .second {
-      color: rgb(253, 100, 228);
-      flex:1
-    }
-  }
-}
+@import "../../App.scss";
 
 .yearContainer {
-  width: 50vw;
   display: flex;
-  height: 20vh;
-  font-size: 9vh;
-  margin-left: 11vw;
-  margin-right: 11vw;
-  align-items: center;
   justify-content: center;
-  transform: translate(0, 28vh);
+  align-items: center;
 
   .first {
     color: $firstYearColor;
-    flex:1;
-    z-index: 1000;
-    cursor:default
-  };
-
+    flex: 1;
+    cursor: default;
+  }
   .second {
     color: $secondYearColor;
-    flex:1;
-    margin-left: 5vw;
-    z-index: 1000;
-    cursor: default
+    flex: 1;
+    cursor: default;
+  }
+}
+
+//mobile
+@media only screen and (max-width: 500px) {
+  .yearContainer {
+    height: 20vh;
+    font-size: 32px;
+    margin-top: 5vh;
+    margin-left: 20px;
+  }
+}
+
+//desktop
+@media only screen and (min-width: 769px) {
+  .yearContainer {
+    width: 50vw;
+    font-size: 9vh;
+    margin-left: 11vw;
+    margin-right: 11vw;
+    transform: translate(0, 8vh);
+
+    .first {
+      z-index: 1000;
+    }
+
+    .second {
+      margin-left: 5vw;
+      z-index: 1000;
+    }
   }
 }

@@ -1,69 +1,68 @@
-@import '../../App.scss';
+@import "../../App.scss";
+
+.flex {
+  display: flex;
+}
+
+.title {
+  color: $textColor;
+  font-weight: 800;
+  opacity: 0.7;
+}
 
 //mobile
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px) {
   .title {
     font-size: 20px;
     width: 10px;
     margin-left: 20px;
     margin-top: 35px;
-    color: rgb(4, 3, 104);
-    font-weight:800;
-  }
-  
-  .flex {
-    display: flex
   }
 }
 
-.title {
-  font-size: 20px;
-  width: 10px;
-  margin-left: 20px;
-  margin-top: 35px;
-  color: $textColor;
-  font-weight:800;
-}
+//desktop
+@media only screen and (min-width: 769px) {
+  .title {
+    width: 10%;
+    font-size: 5vh;
+    padding-left: 9vh;
+    margin-top: 15vh;
+    border-style: solid;
+    border-width: 5px;
+    border-image: linear-gradient(blue, rgb(255, 0, 140)) 1;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+  }
 
-.flex {
-  display: flex
-}
+  .mainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    .secondaryContainer {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      height: 100vh;
+      width: 70vw;
+      position: relative;
+    }
 
-.secondaryContainer {
-  border: 1px solid rgba(0,0,0,0.1);
-  height: 100vh;
-  width: 70vw;
-  position: relative;
-}
+    .spacer2 {
+      position: absolute;
+      z-index: 1000;
+      width: 1px;
+      height: 100vh;
+      background-color: black;
+      opacity: 0.1;
+    }
 
-.mainContainer {
-  display:flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.spacer2 {
-  opacity: 0.3;
-  transform: rotate(90deg) translate(3%, 1vh);
-  position:relative;
-  z-index: 1000;
-}
-
-.spacer3 {
-  opacity: 0.3;
-  transform: translate(0, 19vh);
-  position:relative;
-  z-index: 1000
-}
-
-.circle {
-  width: 30rem;
-  height: 30rem;
-  border: 1px solid rgba(0,0,0,0.2);
-  border-radius: 50%;
-  position: absolute;
-  transform: translate(22.4vw, -2.5vw);
-  z-index:1000;
-  background: rgba(255, 255, 255, 0.001)
+    .spacer3 {
+      position: absolute;
+      z-index: 500;
+      width: 70vw;
+      height: 1px;
+      background-color: black;
+      opacity: 0.1;
+    }
+  }
 }

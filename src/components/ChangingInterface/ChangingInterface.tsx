@@ -1,44 +1,22 @@
 import { FC } from "react";
 import { ChangingInterfaceProps } from "../../utils/Props";
+import Caption from "../CaptionComponent/Caption";
 import Interface from "./Interface";
 
+const ChangingInterface: FC<ChangingInterfaceProps> = ({ currentPage }) => {
+  const numberCondition =
+    currentPage === 1 ? 1980 : 1980 + 7 * (currentPage - 1);
 
-const ChangingInterface: FC<ChangingInterfaceProps>  = ({currentPage}) => {
+  const MobileCaption = window.innerWidth < 501 && (
+    <Caption number={currentPage} />
+  );
 
   return (
     <>
-      {currentPage === 1 && 
-      <Interface
-        number = {1980}
-      />
-      }
-      {currentPage === 2 && 
-      <Interface
-        number = {1987}
-      />
-      }       
-      {currentPage === 3 && 
-      <Interface
-        number = {1994}
-      />
-      }       
-      {currentPage === 4 && 
-      <Interface
-        number = {2001}
-      />
-      }       
-      {currentPage === 5 && 
-      <Interface
-        number = {2008}
-      />
-      }       
-      {currentPage === 6 && 
-      <Interface
-        number = {2015}
-      />
-      }
+      {MobileCaption}
+      <Interface number={numberCondition} />
     </>
-  )
-}
+  );
+};
 
-export default ChangingInterface
+export default ChangingInterface;

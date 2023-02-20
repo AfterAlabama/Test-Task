@@ -1,33 +1,36 @@
-@import '../../App.scss';
+@import "../../App.scss";
 
+.blockContent {
+  h3 {
+    color: $firstYearColor;
+  }
+  p {
+    color: $textColor;
+  }
+}
 
 //mobile
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px) {
   .blockContent {
     margin-left: 20px;
-  
-    h3 {
-      color: $firstYearColor
-    }
     p {
       margin-top: 20px;
-      font-weight: 600;
-      color: $textColor;
-      width: 200px
+      width: 50vw;
+      opacity: 0.8;
     }
   }
 }
 
-.blockContent {
-
-  h3 {
-    color: $firstYearColor;
-    font-size: 2.5vh;
-  }
-  p {
-    margin-top: 1.5vh;
-    opacity: 0.7;
-    color: $textColor;
-    width: 14vw;
+//desktop
+@media only screen and (min-width: 769px) {
+  .blockContent {
+    h3 {
+      font-size: 2.5vh;
+    }
+    p {
+      margin-top: 1.5vh;
+      opacity: 0.7;
+      width: 14vw;
+    }
   }
 }

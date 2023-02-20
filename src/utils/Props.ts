@@ -27,7 +27,7 @@ export interface YearsProps {
 export interface ArrowsProps {
   currentPage: number;
   pageLimit: number;
-  leftArrowClickHandler: () => void,
+  leftArrowClickHandler: () => void
   rightArrowClickHandler: () => void,
 }
 
@@ -45,4 +45,31 @@ export interface SwiperProps {
 
 export interface CaptionProps {
   number:number
+}
+
+
+export interface Circleprops {
+  currentPage:number;
+  setCurrentPage: (page:number) => void
+  firstYear: number;
+  secondYear: number;
+  setFirstYear: (year:number) => void
+  setSecondYear: (year:number) => void
+}
+
+export interface CircleClickHandlerProps {
+  (el:any,
+  currentPage:number,
+  setCurrentPage: (page:number) => void,
+  firstYear: number,
+  secondYear: number,
+  setFirstYear: (year:number) => void,
+  setSecondYear: (year:number) => void,
+  changingInterfaceRef: RefContextProps,
+  circleRef: RefContextProps,
+  captionRef: RefContextProps): void
+}
+
+export interface RefContextProps {
+  current: HTMLDivElement | null
 }

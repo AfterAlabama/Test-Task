@@ -1,15 +1,53 @@
+@import "../../App.scss";
+
+.swiper {
+  cursor: default;
+}
 
 //mobile
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px) {
   .swiper {
     margin-top: 30px;
-    cursor: default
+
+    .swiperButtonPrev,
+    .swiperButtonNext {
+      display: none;
+    }
   }
 }
 
-.swiper {
-  margin-top: 8vh;
-  margin-left: 4vw;
-  font-size: large;
-  cursor:default;
+//desktop
+@media only screen and (min-width: 769px) {
+  .swiper {
+    margin-top: 10vh;
+    margin-left: 2vw;
+    font-size: large;
+
+    .firstSwiperBlock {
+      margin-left: 2vw;
+    }
+
+    .swiperButtonPrev,
+    .swiperButtonNext {
+      top: 50%;
+      position: absolute;
+      z-index: 5000;
+      background-color: white;
+      padding: 10px;
+      border-radius: 50%;
+      color: $firstYearColor;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .swiperButtonPrev {
+      left: 0;
+    }
+
+    .swiperButtonNext {
+      right: 0;
+    }
+  }
 }

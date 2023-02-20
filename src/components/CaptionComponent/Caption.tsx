@@ -1,20 +1,25 @@
-import { FC } from 'react';
-import { CaptionProps } from '../../utils/Props';
-import cl from './Caption.module.scss'
+import { forwardRef } from "react";
+import { CaptionProps } from "../../utils/Props";
+import cl from "./Caption.module.scss";
 
-const Caption: FC<CaptionProps> = ({number}) => {
+const Caption = forwardRef<HTMLDivElement, CaptionProps>(({ number }, ref) => {
+  const captionCondition = [
+    "Технологии",
+    "Кино",
+    "Литература",
+    "Театр",
+    "Спорт",
+    "Наука",
+  ];
+
   return (
-    <h3
-      className={cl.caption}
+    <h3 
+      className={cl.caption} 
+      ref={ref}
     >
-      {number === 1980 && 'Технологии'}
-      {number === 1987 && 'Кино'}
-      {number === 1994 && 'Литература'}
-      {number === 2001 && 'Театр'}
-      {number === 2008 && 'Спорт'}
-      {number === 2015 && 'Наука'}
+      {captionCondition[number - 1]}
     </h3>
-  )
-}
+  );
+});
 
-export default Caption
+export default Caption;

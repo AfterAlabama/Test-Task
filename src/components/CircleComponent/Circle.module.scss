@@ -1,0 +1,75 @@
+//mobile
+@media only screen and (max-width: 500px) {
+  .circle {
+    display: none;
+  }
+}
+
+//desktop
+@media only screen and (min-width: 769px) {
+  .circle {
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.001);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .circleDot1,
+    .circleDot2,
+    .circleDot3,
+    .circleDot4,
+    .circleDot5,
+    .circleDot6 {
+      width: 8px;
+      height: 8px;
+      background-color: black;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 1001;
+      opacity: 0.6;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .circleDot1 {
+      transform: translate(125px, -216px);
+    }
+    .circleDot2 {
+      transform: translate(250px);
+    }
+    .circleDot3 {
+      transform: translate(125px, 216px);
+    }
+    .circleDot4 {
+      transform: translate(-125px, 216px);
+    }
+    .circleDot5 {
+      transform: translate(-250px);
+    }
+    .circleDot6 {
+      transform: translate(-125px, -216px);
+    }
+    .active {
+      width: 60px;
+      height: 60px;
+      background-color: white;
+      opacity: 1;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .inactive {
+      width: 8px;
+      height: 8px;
+      background-color: black;
+      opacity: 0.6;
+      border: none;
+    }
+  }
+}
