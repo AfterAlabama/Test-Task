@@ -1,4 +1,15 @@
 
+//mobile
+@media only screen and (max-width: 500px){
+  .swiper {
+    margin-top: 30px;
+    cursor: default
+  }
+}
+
 .swiper {
-  margin-top: 30px;
+  margin-top: 8vh;
+  margin-left: 4vw;
+  font-size: large;
+  cursor:default;
 }

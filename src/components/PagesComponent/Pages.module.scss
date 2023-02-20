@@ -1,4 +1,17 @@
+@import '../../App.scss';
+
+//mobile
+@media only screen and (max-width: 500px){
+  .pages {
+    margin-left: 20px;
+    margin-top: 50px
+  }
+}
+
 .pages {
-  margin-left: 20px;
-  margin-top: 50px
+  margin-left: 4vw;
+  margin-top: 33vh;
+  font-size: 2vh;
+  color: rgba(1, 20, 85, 0.7);
+  font-weight: 100;
 }

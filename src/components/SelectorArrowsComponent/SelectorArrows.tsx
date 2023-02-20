@@ -1,7 +1,7 @@
 import cl from './SelectorArrows.module.scss'
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import { FC} from 'react';
 import { ArrowsProps } from '../../utils/Props';
+import {MdArrowBackIos, MdArrowForwardIos} from 'react-icons/md';
 
 
 const SelectorArrows: FC<ArrowsProps> = ({currentPage, pageLimit, leftArrowClickHandler, rightArrowClickHandler}) => {
@@ -15,24 +15,24 @@ const SelectorArrows: FC<ArrowsProps> = ({currentPage, pageLimit, leftArrowClick
         <div
           className={cl.grayed}
         >
-          {<AiOutlineArrowLeft/>}
+          {<MdArrowBackIos/>}
         </div> 
       :
-        <div>{<AiOutlineArrowLeft 
+        <div
           onClick = {leftArrowClickHandler}
-        />}</div>
+        >{<MdArrowBackIos/>}</div>
       }
       {currentPage === pageLimit 
       ?
         <div
           className={cl.grayed}
         >
-          {<AiOutlineArrowRight/>}
+          {<MdArrowForwardIos/>}
         </div> 
       :
-        <div>{<AiOutlineArrowRight 
+        <div
           onClick = {rightArrowClickHandler}
-        />}</div>
+        >{<MdArrowForwardIos/>}</div>
       }
     </div>
   )

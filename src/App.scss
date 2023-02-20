@@ -1,6 +1,21 @@
+$textColor:rgb(3, 2, 53); 
+$firstYearColor: rgb(3, 100, 226);
+$secondYearColor: rgb(255, 80, 168);
+
+:export {
+  textColor: $textColor;
+  firstYearColor: $firstYearColor;
+  secondYearColor: $secondYearColor
+}
+
 * {
   background-color: #f4f4f4;
   padding: 0;
+  margin:0;
   box-sizing: border-box;
   font-family: 'Oxygen', sans-serif;
+  user-select: none;
+  -webkit-user-drag: none;
 }
+
+

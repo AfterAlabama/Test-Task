@@ -11,7 +11,7 @@ const SwiperDates: FC<SwiperProps> = ({number}) => {
     <Swiper
       className={cl.swiper}
       spaceBetween={50}
-      slidesPerView={2}
+      slidesPerView={window.innerWidth < 501 ? 2 : 4}
     >
       <SwiperSlide>
         <Block

@@ -143,41 +143,56 @@ const HistoryDatesApp = () => {
   };
 
   return (
-    <>
-      <h1
-        className={cl.title}
-      >Исторические даты
-      </h1>
-      <MainYears
-        firstYear={firstYear}
-        secondYear = {secondYear}
-      />
+    <div
+      className = {cl.mainContainer}
+    >
       <div
-        id = "changingInterface"
-      >
-         <ChangingInterface
-          currentPage = {currentPage}
-         />      
-      </div>
-      <Pages
-        currentPage={currentPage}
-        pageLimit={pageLimit}
-      />
-      <div
-        className = {cl.flex}
-      >
-        <SelectorArrows
+        className = {cl.secondaryContainer}
+      >    
+        <h1
+          className={cl.title}
+        >Исторические даты
+        </h1>
+        <MainYears
+          firstYear={firstYear}
+          secondYear = {secondYear}
+        />
+        <div
+          className = {cl.circle}
+        ></div> 
+        <hr
+          className={cl.spacer2}
+        />
+        <hr
+          className={cl.spacer3}
+        />
+        <Pages
           currentPage={currentPage}
           pageLimit={pageLimit}
-          leftArrowClickHandler = {leftArrowClickHandler}
-          rightArrowClickHandler = {rightArrowClickHandler}
         />
-        <SelectorDots
-          currentPage={currentPage}
-          DotClickHandler = {DotClickHandler}
-        />
+        <div
+          className = {cl.flex}
+        >
+          <SelectorArrows
+            currentPage={currentPage}
+            pageLimit={pageLimit}
+            leftArrowClickHandler = {leftArrowClickHandler}
+            rightArrowClickHandler = {rightArrowClickHandler}
+          />
+          <SelectorDots
+            currentPage={currentPage}
+            DotClickHandler = {DotClickHandler}
+          />
+        </div>
+        <div
+          id = "changingInterface"
+        >
+          <ChangingInterface
+            currentPage = {currentPage}
+          />      
+        </div>
       </div>
-    </>
+    </div>
   )
 }
 

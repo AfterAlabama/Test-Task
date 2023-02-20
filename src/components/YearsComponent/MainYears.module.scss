@@ -1,18 +1,50 @@
+@import '../../App.scss';
+
+//mobile
+@media only screen and (max-width: 500px){
+  .yearContainer {
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+    align-items: center;
+    font-size: 32px;
+    margin-left: 20px;
+  
+    .first {
+      color: rgb(52, 21, 230);
+      flex:1
+    };
+  
+    .second {
+      color: rgb(253, 100, 228);
+      flex:1
+    }
+  }
+}
+
 .yearContainer {
+  width: 50vw;
   display: flex;
-  justify-content: center;
   height: 20vh;
+  font-size: 9vh;
+  margin-left: 11vw;
+  margin-right: 11vw;
   align-items: center;
-  font-size: 32px;
-  margin-left: 20px;
+  justify-content: center;
+  transform: translate(0, 28vh);
 
   .first {
-    color: rgb(52, 21, 230);
-    flex:1
+    color: $firstYearColor;
+    flex:1;
+    z-index: 1000;
+    cursor:default
   };
 
   .second {
-    color: rgb(253, 100, 228);
-    flex:1
+    color: $secondYearColor;
+    flex:1;
+    margin-left: 5vw;
+    z-index: 1000;
+    cursor: default
   }
 }
